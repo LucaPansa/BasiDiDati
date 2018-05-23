@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voto</title>
+</head>
+<body>
+    <h2>Voto esame</h2>
+
+    <p>
+        Voto:
+        {%if voto < 18 %}
+            insufficiente
+        {% elif voto > 30 %}
+            30 e lode
+        {% elif %}
+            {{ voto }}
+        {% endif %}
+    </p>
+
+</body>
+</html>
