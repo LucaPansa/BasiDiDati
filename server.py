@@ -53,4 +53,6 @@ def hello(name):
 def add(x,y):
     return str(x + y)
 
+
+
 app.run(debug=True) #Con debug mode off viene visualizzata la generica eccezione "Internal server error"
