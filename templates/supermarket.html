@@ -5,6 +5,16 @@
     <title>$Title$</title>
 </head>
 <body>
-$END$
+    <table border="solid">
+        <th>Product</th>
+        <th>Price</th>
+            {% for key in prices %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ prices[key] }}</td>
+                </tr>
+            {% endfor %}
+
+    </table>
 </body>
 </html>

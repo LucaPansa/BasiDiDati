@@ -41,8 +41,16 @@ def template_for():
     return render_template('template_for.html', todoList=todoList, len=len(todoList))
 
 @app.route('/supermarket')
-def supermarket:
-    price = {'strawberry',}
+def supermarket():
+    price = {'strawberry': 2.0,'lemon' :1.0, 'Ciapo':-43214234224332422.0} #dizionario, associa chiave a valore mediante i ":"
+    return render_template("supermarket.html", prices=price)
 
+@app.route('/hello/<name>')
+def hello(name):
+    return "hello, %s!" % name
+
+@app.route('/add/<int:x>/<int:y>')
+def add(x,y):
+    return str(x + y)
 
 app.run(debug=True) #Con debug mode off viene visualizzata la generica eccezione "Internal server error"
